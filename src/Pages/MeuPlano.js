@@ -1,4 +1,3 @@
-import Navbar from "../Components/Navbar";
 import './MeuPlano.css'
 import React from "react";
 import ButtonRed from "../Components/ButtonRed";
@@ -10,7 +9,6 @@ const MeuPlano = ({ myPlan }) => {
     return(
         <div>
             
-            <Navbar />
             <h1>Meu Plano</h1>
             {myPlan.length === 0 ? (
                 <p className="info">Seus treinos aparecerão aqui!</p>
@@ -19,7 +17,6 @@ const MeuPlano = ({ myPlan }) => {
                 {myPlan.map((workout) => (
                     <div>
                         <ItemWorkout key={workout.id} workout={workout}  />
-
                         <div className="container-btns">
                             <ButtonRed name="Remover"/>
                             <ButtonGreen name="Ver detalhes" />

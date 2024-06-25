@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../Components/Navbar";
 import ItemWorkout from "../Components/ItemWorkout";
 import './Historico.css'
 const Historico = () => {
@@ -15,7 +14,6 @@ const Historico = () => {
 
     return(
         <div>
-            <Navbar />
 
             <h1>Histórico de Treinos Concluídos</h1>
 

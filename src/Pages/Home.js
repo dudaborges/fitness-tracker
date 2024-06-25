@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import ItemWorkout from "../Components/ItemWorkout";
 import './Home.css'
-import Navbar from "../Components/Navbar";
-import ButtonRed from "../Components/ButtonRed";
 import ButtonGreen from "../Components/ButtonGreen";
 
 
-const Home = ({addWorkout, myPlan}) => {
+const Home = ({ addWorkout}) => {
     const [workouts, setWorkouts] = useState([
         {
             id: 1,
@@ -41,14 +39,14 @@ const Home = ({addWorkout, myPlan}) => {
 
     return(
         <div id="Home">
-            <Navbar />
             <h1>Treinos Recomendados</h1>
+
             <div className="container-workouts">
                 {workouts.map((workout) => (
                     <div>
                         <ItemWorkout key={workout.id} workout={workout}  />
                         <div className="container-btn">
-                            <ButtonGreen name="Adicionar no Meu Plano" function={addWorkout} args={workout} />
+                            <ButtonGreen name="Adicionar no Meu Plano" addWorkout={addWorkout} workout={workout} />
                         </div>
                     </div>
                 ))}

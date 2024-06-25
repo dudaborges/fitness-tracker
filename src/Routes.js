@@ -4,6 +4,7 @@ import MeuPlano from "./Pages/MeuPlano";
 import DetalhesTreino from "./Pages/DetalhesTreino";
 import Historico from "./Pages/Historico";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
 
 const AppRoutes = () => {
     const [myPlan, setMyPlan] = useState([])
@@ -14,12 +15,14 @@ const AppRoutes = () => {
 
     return(
         <Router>
+            <Navbar />
+
             <Routes>
                 <Route path="/" element={<Home addWorkout={addWorkout} />} ></Route>
                 <Route path="/meu-plano" element={<MeuPlano myPlan={myPlan} />}></Route>
                 <Route path="/detalhes-treino" element={<DetalhesTreino/>}></Route>
                 <Route path="/historico" element={<Historico />}></Route>
-+            </Routes>
+            </Routes>
         </Router>
     )
 }

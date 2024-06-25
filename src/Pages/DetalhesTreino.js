@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
 import DetalhesTreinoInfo from "../Components/DetalhesTreinoInfo";
 import './DetalhesTreino.css'
 import ButtonBack from "../Components/ButtonBack";
@@ -8,7 +7,6 @@ const DetalhesTreino = () => {
     
     return (
         <div>
-            <Navbar />
 
             <h1>Detalhes do Treino</h1>
             <div className="container-workout-details">
