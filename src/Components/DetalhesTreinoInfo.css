@@ -1,0 +1,11 @@
+.card-treino-info{
+    width: 50%;
+    background-color: #efeeee;
+    box-shadow: 5px 0 12px 4px #0000002d;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-treino-info span{
+    font-weight: 600;
+}

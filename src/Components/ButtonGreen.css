@@ -1,0 +1,9 @@
+button.btn-add {
+    border: none;
+    padding: 10px 30px;
+    background-color: green;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}

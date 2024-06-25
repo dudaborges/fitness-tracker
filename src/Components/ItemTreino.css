@@ -1,0 +1,21 @@
+.item-treino {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+
+    background-color: #efeeee;
+    box-shadow: 5px 0 12px 4px #0000002d;
+    list-style-type: none;
+    text-align: center;
+}
+
+.item-treino span{
+    font-weight: 600;
+}
+
+.item-treino h2{
+    font-size: 16px;
+}
