@@ -4,3 +4,8 @@
     align-items: center;
     gap: 10px;
 }
+
+p.info{
+    text-align: center;
+    font-size: 18px;
+}

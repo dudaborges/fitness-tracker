@@ -1,31 +1,34 @@
-import React from "react";
 import Navbar from "../Components/Navbar";
-import ItemTreino from "../Components/ItemTreino";
+import './MeuPlano.css'
+import React from "react";
 import ButtonRed from "../Components/ButtonRed";
 import ButtonGreen from "../Components/ButtonGreen";
-import './MeuPlano.css'
+import ItemWorkout from "../Components/ItemWorkout";
 
-const MeuPlano = () => {
+
+const MeuPlano = ({ myPlan }) => {
     return(
         <div>
+            
             <Navbar />
-
             <h1>Meu Plano</h1>
+            {myPlan.length === 0 ? (
+                <p className="info">Seus treinos aparecerão aqui!</p>
+            ) : (
+            <div className="container-workouts">
+                {myPlan.map((workout) => (
+                    <div>
+                        <ItemWorkout key={workout.id} workout={workout}  />
 
-            <ul className="cards-treinos">
-                <div>
-                <ItemTreino 
-                    name="Treino de Cardio HIIT" 
-                    description="Alterna entre exercícios de alta intensidade, como sprints ou burpees, e períodos curtos de descanso ou atividade leve" duration="20-30 minutos" 
-                    />
-
-                    <div className="container-btns">
-                        <ButtonRed name="Remover"/>
-                        <ButtonGreen name="Ver detalhes" />
+                        <div className="container-btns">
+                            <ButtonRed name="Remover"/>
+                            <ButtonGreen name="Ver detalhes" />
+                        </div>
                     </div>
+                ))}
+            </div>
+            )}
 
-                </div>
-            </ul>
         </div>
     )
 }

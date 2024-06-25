@@ -1,3 +1,10 @@
+.container-workouts{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
 .item-treino {
     display: flex;
     flex-direction: column;

@@ -1,28 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Components/Navbar";
-import ItemTreino from "../Components/ItemTreino";
+import ItemWorkout from "../Components/ItemWorkout";
 import './Historico.css'
 const Historico = () => {
+    const [workouts, setWorkouts] = useState([
+        {
+            id: 1,
+            name: "Treino de Cardio HIIT",
+            description: "Alterna entre exercícios de alta intensidade, como sprints ou burpees, e períodos curtos de descanso ou atividade leve",
+            duration: "20-30 minutos",
+            isCompleted: false
+        }
+    ])
+
     return(
         <div>
             <Navbar />
 
             <h1>Histórico de Treinos Concluídos</h1>
 
-            <ul className="cards-treinos">
-
-                <div>
-                    <ItemTreino 
-                    name="Treino de Força Total" 
-                    description="Envolve levantamento de peso com foco em todos os principais grupos musculares: pernas, costas, peito, braços e core" duration="45-60 minutos" 
-                    />
-                    <div className="info-treinos">
-                        <p>Status: Concluído</p>
-                        <span>Data de conclusão: 24/06</span>
+            <div className="container-workouts">
+                {workouts.map((workout) => (
+                    <div>
+                        <ItemWorkout key={workout.id} workout={workout}  />
+                        <div className="info-treinos">
+                            <p>Status: Concluído</p>
+                            <span>Data de conclusão: 24/06</span>
+                        </div>
                     </div>
+                ))}
+            </div>
 
-                </div>
-            </ul>
         </div>
     )
 }

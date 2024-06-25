@@ -5,6 +5,7 @@ import './DetalhesTreino.css'
 import ButtonBack from "../Components/ButtonBack";
 
 const DetalhesTreino = () => {
+    
     return (
         <div>
             <Navbar />
