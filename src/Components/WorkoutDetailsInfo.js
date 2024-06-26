@@ -1,8 +1,8 @@
 import React from "react";
-import './DetalhesTreinoInfo.css'
+import '../Styles/WorkoutsDetailsInfo.css'
 import ButtonComplete from "./ButtonComplete";
 
-const DetalhesTreinoInfo = ({ workout, isInPlan, completeWorkout }) => {
+const WorkoutDetailsInfo = ({ workout, isInPlan, completeWorkout }) => {
     return(
         <div className="card-treino-info">
             <h2>{workout.name}</h2>
@@ -21,4 +21,4 @@ const DetalhesTreinoInfo = ({ workout, isInPlan, completeWorkout }) => {
     )
 }
 
-export default DetalhesTreinoInfo
+export default WorkoutDetailsInfo

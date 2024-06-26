@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Home from "./Pages/Home";
-import MeuPlano from "./Pages/MeuPlano";
-import DetalhesTreino from "./Pages/DetalhesTreino";
-import Historico from "./Pages/Historico";
+import MyPlan from "./Pages/MyPlan";
+import WorkoutsDetails from "./Pages/WorkoutsDetails";
+import History from "./Pages/History";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 
@@ -36,9 +36,9 @@ const AppRoutes = () => {
             <Routes>
                 <Route path="/" element={<Home addWorkout={addWorkout} />} ></Route>
                 <Route path="/meu-plano" 
-                element={<MeuPlano myPlan={myPlan} removeWorkout={removeWorkout} />}></Route>
-                <Route path="/detalhes-treino/:id" element={<DetalhesTreino workouts={myPlan} completeWorkout={completeWorkout} />}></Route>
-                <Route path="/historico" element={<Historico history={history} />}></Route>
+                element={<MyPlan myPlan={myPlan} removeWorkout={removeWorkout} />}></Route>
+                <Route path="/detalhes-treino/:id" element={<WorkoutsDetails workouts={myPlan} completeWorkout={completeWorkout} />}></Route>
+                <Route path="/historico" element={<History history={history} />}></Route>
             </Routes>
         </Router>
     )

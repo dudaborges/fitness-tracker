@@ -1,5 +1,5 @@
 import React from "react";
-import './ButtonRed.css'
+import '../Styles/ButtonRed.css'
 
 const ButtonRed = ({ name, removeWorkout, workout }) => {
     return(

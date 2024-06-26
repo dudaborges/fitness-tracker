@@ -1,7 +1,7 @@
 import React from "react";
 import ItemWorkout from "../Components/ItemWorkout";
-import './Historico.css'
-const Historico = ({ history }) => {
+import '../Styles/History.css'
+const History = ({ history }) => {
 
     return(
         <div>
@@ -31,4 +31,4 @@ const Historico = ({ history }) => {
     )
 }
 
-export default Historico
+export default History

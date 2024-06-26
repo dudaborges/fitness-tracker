@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ItemWorkout from "../Components/ItemWorkout";
-import './Home.css'
+import '../Styles/Home.css'
 import ButtonAdd from "../Components/ButtonAdd";
 
 

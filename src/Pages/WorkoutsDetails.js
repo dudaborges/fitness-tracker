@@ -1,10 +1,10 @@
 import React from "react";
-import DetalhesTreinoInfo from "../Components/DetalhesTreinoInfo";
-import './DetalhesTreino.css'
+import WorkoutDetailsInfo from "../Components/WorkoutDetailsInfo";
+import '../Styles/WorkoutsDetails.css'
 import ButtonBackMyPlan from "../Components/ButtonBackMyPlan";
 import { useParams } from "react-router-dom";
 
-const DetalhesTreino = ({ workouts, completeWorkout }) => {
+const WorkoutsDetails = ({ workouts, completeWorkout }) => {
 
     const { id } = useParams()
     const workout = workouts.find(workout => workout.id === parseInt(id))
@@ -19,7 +19,7 @@ const DetalhesTreino = ({ workouts, completeWorkout }) => {
 
             
             <div className="container-workout-details">
-                <DetalhesTreinoInfo workout={workout} isInPlan={isInPlan} completeWorkout={completeWorkout} />
+                <WorkoutDetailsInfo workout={workout} isInPlan={isInPlan} completeWorkout={completeWorkout} />
 
                 <ButtonBackMyPlan />
             </div>
@@ -28,4 +28,4 @@ const DetalhesTreino = ({ workouts, completeWorkout }) => {
     )
 }
 
-export default DetalhesTreino
+export default WorkoutsDetails

@@ -1,4 +1,4 @@
-import './ItemWorkout.css';
+import '../Styles/ItemWorkout.css';
 
 
 const ItemWorkout = ({workout}) => {

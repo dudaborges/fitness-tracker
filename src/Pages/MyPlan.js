@@ -1,11 +1,11 @@
-import './MeuPlano.css'
+import '../Styles/MyPlan.css'
 import React from "react";
 import ButtonRed from "../Components/ButtonRed";
 import ButtonSeeDetails from "../Components/ButtonSeeDetails";
 import ItemWorkout from "../Components/ItemWorkout";
 
 
-const MeuPlano = ({ myPlan, removeWorkout, toDetails }) => {
+const MyPlan = ({ myPlan, removeWorkout, toDetails }) => {
     return(
         <div>
             
@@ -30,4 +30,4 @@ const MeuPlano = ({ myPlan, removeWorkout, toDetails }) => {
     )
 }
 
-export default MeuPlano
+export default MyPlan

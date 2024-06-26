@@ -1,5 +1,5 @@
 import React from "react";
-import './ButtonGreen.css'
+import '../Styles/ButtonGreen.css'
 
 const ButtonAdd = ({ name, addWorkout, workout }) => {
     return(
