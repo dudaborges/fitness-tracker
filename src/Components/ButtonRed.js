@@ -1,9 +1,9 @@
 import React from "react";
 import './ButtonRed.css'
 
-const ButtonRed = (props) => {
+const ButtonRed = ({ name, removeWorkout, workout }) => {
     return(
-        <button className="btn-red">{props.name}</button>
+        <button className="btn-red" onClick={() => removeWorkout(workout.id)}>{name}</button>
     )
 }
 

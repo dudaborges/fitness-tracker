@@ -1,11 +1,11 @@
 import './MeuPlano.css'
 import React from "react";
 import ButtonRed from "../Components/ButtonRed";
-import ButtonGreen from "../Components/ButtonGreen";
+import ButtonSeeDetails from "../Components/ButtonSeeDetails";
 import ItemWorkout from "../Components/ItemWorkout";
 
 
-const MeuPlano = ({ myPlan }) => {
+const MeuPlano = ({ myPlan, removeWorkout, toDetails }) => {
     return(
         <div>
             
@@ -18,8 +18,8 @@ const MeuPlano = ({ myPlan }) => {
                     <div>
                         <ItemWorkout key={workout.id} workout={workout}  />
                         <div className="container-btns">
-                            <ButtonRed name="Remover"/>
-                            <ButtonGreen name="Ver detalhes" />
+                            <ButtonRed name="Remover" removeWorkout={removeWorkout} workout={workout} />
+                            <ButtonSeeDetails name="Ver detalhes" workout={workout}  />
                         </div>
                     </div>
                 ))}
